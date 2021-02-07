@@ -1,0 +1,92 @@
+.cellInput {
+    border: none;
+    outline: none;
+    margin: 0;
+}
+
+input[type='text']:disabled {
+    background-color: transparent;
+}
+
+#app {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); 
+}
+
+#buttons {
+    display: flex;
+    align-items: flex-start;
+}
+
+.button {
+    margin-top: 1em;
+    margin-left: .5em;
+    margin-right: .5em;
+}
+
+#new-game {
+    margin-right: 10em;
+}
+
+.row {
+    display: flex;
+}
+
+.cell {
+    width: 3.5em;
+    height: 3.5em;
+    text-align: center;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    border: none;
+    outline: none;
+    border-right: 0.08em dashed rgba(47, 79, 79, 0.6);
+    border-bottom: 0.08em dashed rgba(47, 79, 79, 0.6);
+}
+
+.cell:hover {
+    cursor: pointer;
+    animation-name: color;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes color {
+    0% {
+        background-color: transparent;
+    }
+    50% {
+        background-color:rgba(182, 179, 179, 0.6);
+    }
+    100% {
+        background-color: transparent;
+    }
+}
+
+.border-top {
+    border-top: .15em solid black;
+}
+
+.border-bottom {
+    border-bottom: .15em solid black;
+}
+
+.border-right {
+    border-right: .15em solid black;
+}
+
+.border-left {
+    border-left: .15em solid black;
+}
+
+.hidden {
+    visibility: hidden;
+    display: none;
+}
