@@ -1,70 +1,130 @@
-# Getting Started with Create React App
+# Sudoku Web App
+This is my Sudoku Web App. Created using JavaScript and using the React library. The maps are pre-generated using the generator algorithm below, and then uploaded to the website. Every puzzle has only one possible solution. The application uses an internal solver using the solver algorithm below in order to provide hints and to check if the user has solved the puzzle.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Check it out here: &nbsp; shihadam.github.io/sudoku
 
-## Available Scripts
+<br />
 
-In the project directory, you can run:
+# Motivation
+I created this program mainly to learn how to program for the web. I was able to start learning HTML, CSS, JavaScript and also React. Also, I like algorithms and Sudoku so it was a fun exercise in implementing both!
 
-### `npm start`
+<br />
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+# Algorithms
+## Solver:
+```py
+# solves the board if possible using backtracking algorithm
+solve(board):
+    empty = findEmpty(board)
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+    if not empty:
+        return True
 
-### `npm test`
+    row = empty.y
+    col = empty.x
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+    for i in range(1, 10):
+        if valid(board, i, empty)
+            board[row][col] = i
 
-### `npm run build`
+            if solve(board):
+                return board
+            board[row][col] = 0
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+    return False
+```
+## Generator:
+```py
+# pass a solved board into the generator
+generate(numCellsToRemove):
+    board = 2D array of all 0
+    nums = shuffle()
+    solve(board, nums)
+    return removeCells(board, nums, numCellsToRemove)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+# remove n cells from a solved board
+# uses backtracking to create unique solution
+removeCells(board, nums, count):
+    tries = 20 # arbitrary number to make sure it doesnt run forever
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+    for i in range(0, tries):
+        index = random index
+        if board[index.y][index.x] is not empty:
+            original_value = value at index
+            temp = copy of board
+            if solve(temp, nums, index, original_value) == False:
+                if removeCells(board, nums, count - 1)
+                    return board
 
-### `npm run eject`
+            board[index.y][index.x] = original_value
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+    return False        
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+# modified solver to use random nums and forbidden index and values
+# this is necessary for creating puzzles with only one solution
+solve(board, nums, fb_index = null, fb_val = null):
+    empty = findEmpty(board)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+    if not empty: return True
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+    row = empty.y
+    col = empty.x
 
-## Learn More
+    for i in range(0, nums.length):
+        if fb_index and fb_val:
+            if move is forbidden:
+                continue
+        
+        if valid(board, nums[i], empty):
+            board[row][col] = nums[i]
+            if solve(board, nums):
+                return board
+            board[row][col] = 0
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+    return False
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+# find the first empty cell on the board
+findEmpty(board):
+    for i in range(0, board.length):
+        for j in range(0, board[i].length):
+            if board[i][j] is empty:
+                return empty position
 
-### Code Splitting
+# check if a move is valid
+valid(board, num, pos):
+    # check if num appears in same row
+    for i in range(0, board[pos.y].length):
+        if board[pos.y][i] == num:
+            return False
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+    # check for column
+    for i in range(0, board.length):
+        if board[i][pos.x] == num:
+            return False
 
-### Analyzing the Bundle Size
+    # check for tile
+    x = (pos.x // 3) * 3
+    y = (pox.y // 3) * 3
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+    for i in range(0, 2):
+        for j in range(0, 2):
+            if board[y + i][x + j] == num:
+                return False
 
-### Making a Progressive Web App
+    return True
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+# Fisher-Yates shuffle to randomize number choices
+# from https://bost.ocks.org/mike/shuffle/
+shuffle():
+    nums = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+    m = nums.length
 
-### Advanced Configuration
+    while(m):
+        m -= 1
+        i = random() // m
+        t = nums[m]
+        nums[m] = nums[i]
+        nums[i] = t
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+    return nums
+```
