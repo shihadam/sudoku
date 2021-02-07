@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/shihadam.github.io/sudoku/static/css/main.43073919.chunk.css",
-    "main.js": "/shihadam.github.io/sudoku/static/js/main.ab7867bf.chunk.js",
-    "main.js.map": "/shihadam.github.io/sudoku/static/js/main.ab7867bf.chunk.js.map",
-    "runtime-main.js": "/shihadam.github.io/sudoku/static/js/runtime-main.2b619195.js",
-    "runtime-main.js.map": "/shihadam.github.io/sudoku/static/js/runtime-main.2b619195.js.map",
-    "static/js/2.537924e1.chunk.js": "/shihadam.github.io/sudoku/static/js/2.537924e1.chunk.js",
-    "static/js/2.537924e1.chunk.js.map": "/shihadam.github.io/sudoku/static/js/2.537924e1.chunk.js.map",
-    "index.html": "/shihadam.github.io/sudoku/index.html",
-    "static/css/main.43073919.chunk.css.map": "/shihadam.github.io/sudoku/static/css/main.43073919.chunk.css.map",
-    "static/js/2.537924e1.chunk.js.LICENSE.txt": "/shihadam.github.io/sudoku/static/js/2.537924e1.chunk.js.LICENSE.txt"
+    "main.css": "/sudoku/static/css/main.43073919.chunk.css",
+    "main.js": "/sudoku/static/js/main.ab7867bf.chunk.js",
+    "main.js.map": "/sudoku/static/js/main.ab7867bf.chunk.js.map",
+    "runtime-main.js": "/sudoku/static/js/runtime-main.c4df807e.js",
+    "runtime-main.js.map": "/sudoku/static/js/runtime-main.c4df807e.js.map",
+    "static/js/2.537924e1.chunk.js": "/sudoku/static/js/2.537924e1.chunk.js",
+    "static/js/2.537924e1.chunk.js.map": "/sudoku/static/js/2.537924e1.chunk.js.map",
+    "index.html": "/sudoku/index.html",
+    "static/css/main.43073919.chunk.css.map": "/sudoku/static/css/main.43073919.chunk.css.map",
+    "static/js/2.537924e1.chunk.js.LICENSE.txt": "/sudoku/static/js/2.537924e1.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.2b619195.js",
+    "static/js/runtime-main.c4df807e.js",
     "static/js/2.537924e1.chunk.js",
     "static/css/main.43073919.chunk.css",
     "static/js/main.ab7867bf.chunk.js"
