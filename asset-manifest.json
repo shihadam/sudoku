@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/shihadam.github.io/sudoku/static/css/main.43073919.chunk.css",
+    "main.js": "/shihadam.github.io/sudoku/static/js/main.ab7867bf.chunk.js",
+    "main.js.map": "/shihadam.github.io/sudoku/static/js/main.ab7867bf.chunk.js.map",
+    "runtime-main.js": "/shihadam.github.io/sudoku/static/js/runtime-main.2b619195.js",
+    "runtime-main.js.map": "/shihadam.github.io/sudoku/static/js/runtime-main.2b619195.js.map",
+    "static/js/2.537924e1.chunk.js": "/shihadam.github.io/sudoku/static/js/2.537924e1.chunk.js",
+    "static/js/2.537924e1.chunk.js.map": "/shihadam.github.io/sudoku/static/js/2.537924e1.chunk.js.map",
+    "index.html": "/shihadam.github.io/sudoku/index.html",
+    "static/css/main.43073919.chunk.css.map": "/shihadam.github.io/sudoku/static/css/main.43073919.chunk.css.map",
+    "static/js/2.537924e1.chunk.js.LICENSE.txt": "/shihadam.github.io/sudoku/static/js/2.537924e1.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.2b619195.js",
+    "static/js/2.537924e1.chunk.js",
+    "static/css/main.43073919.chunk.css",
+    "static/js/main.ab7867bf.chunk.js"
+  ]
+}
