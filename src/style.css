@@ -1,28 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Mega&display=swap');
+
 .cellInput {
     border: none;
     outline: none;
     margin: 0;
 }
 
-input[type='text']:disabled {
+input[type='text'] {
     background-color: transparent;
 }
 
 #app {
     display: flex;
     flex-direction: column;
+    padding-left: 5em;
+    padding-right: 5em;
+}
+
+#game {
+    display: flex;
+    flex-direction: column;
     align-items: center;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%); 
+    margin: 2em;
+    /* position: absolute; */
+
+        /* top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);  */
 }
 
 @media print {
-    input {
+    /* input {
         display: none;
         visibility: none;
-    }
+    } */
     button {
         display: none;
     }
@@ -32,12 +43,12 @@ input[type='text']:disabled {
 }
 
 .header {
-    height: 7em;
-    position: fixed;
+    font-family: 'Lexend Mega', sans-serif;
+    height: 70px;
     top: 0;
-    width: 100%;
     left: 0;
     border-bottom: .08em solid black;
+    justify-content: center;
 }
 
 .header h1 {
@@ -50,6 +61,7 @@ input[type='text']:disabled {
 }
 
 .button {
+    font-family: 'Lexend Mega', sans-serif;
     margin-top: 1em;
     margin-left: .5em;
     margin-right: .5em;
@@ -60,17 +72,15 @@ input[type='text']:disabled {
 }
 
 .cell {
+    font-family: 'Lexend Mega', sans-serif;
+    font-size: 18px;
     width: 3.5em;
     height: 3.5em;
     text-align: center;
-    margin: 0;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
     border: none;
     outline: none;
-    border-right: 0.08em dashed rgba(47, 79, 79, 0.6);
-    border-bottom: 0.08em dashed rgba(47, 79, 79, 0.6);
+    border-right: 1px dashed rgba(47, 79, 79, 0.6);
+    border-bottom: 1px dashed rgba(47, 79, 79, 0.6);
 }
 
 .cell:hover {
@@ -109,6 +119,11 @@ input[type='text']:disabled {
 }
 
 .hidden {
-    visibility: hidden;
+    /* visibility: hidden; */
     display: none;
+}
+
+#timer {
+    font-family: 'Lexend Mega', sans-serif;
+    font-size: 20px;
 }

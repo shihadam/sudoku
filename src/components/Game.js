@@ -84,7 +84,7 @@ class Game extends Component {
     const { board, solved, isSolved, boardHide, solvedHide } = this.state;   
 
     return (
-      <div id='app'>
+      <div id='game'>
         <Timer id='timer' onRef={ref => (this.timer = ref)} start={new Date()} />
         <Board onRef={ref => (this.board = ref)} className={boardHide} board={board} isSolved={isSolved} />
         <Board onRef={ref => (this.solved = ref)} className={solvedHide} board={solved} isSolved={isSolved} />
