@@ -18,6 +18,32 @@ input[type='text']:disabled {
     transform: translate(-50%, -50%); 
 }
 
+@media print {
+    input {
+        display: none;
+        visibility: none;
+    }
+    button {
+        display: none;
+    }
+    #timer {
+        display: none;
+    }
+}
+
+.header {
+    height: 7em;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    left: 0;
+    border-bottom: .08em solid black;
+}
+
+.header h1 {
+    text-align: center;
+}
+
 #buttons {
     display: flex;
     align-items: flex-start;
@@ -27,10 +53,6 @@ input[type='text']:disabled {
     margin-top: 1em;
     margin-left: .5em;
     margin-right: .5em;
-}
-
-#new-game {
-    margin-right: 10em;
 }
 
 .row {

@@ -85,14 +85,14 @@ class Game extends Component {
 
     return (
       <div id='app'>
-        <Timer onRef={ref => (this.timer = ref)} start={new Date()} />
+        <Timer id='timer' onRef={ref => (this.timer = ref)} start={new Date()} />
         <Board onRef={ref => (this.board = ref)} className={boardHide} board={board} isSolved={isSolved} />
         <Board onRef={ref => (this.solved = ref)} className={solvedHide} board={solved} isSolved={isSolved} />
         <div id='buttons'>
           <button id='new-game' className='button' onClick={this.loadBoard}>New Game</button>
+          <button className='button' onClick={window.print}>Print</button>
           <button id='check' className='button' onClick={this.checkBoard}>Check</button>
-          <button id='hint' className='button' onClick={this.hint}>Hint</button>
-          <p id='hints' >{this.state.hints}</p>
+          <button id='hint' className='button' onClick={this.hint}>Hint : {this.state.hints}</button>
         </div>
       </div>
     );
